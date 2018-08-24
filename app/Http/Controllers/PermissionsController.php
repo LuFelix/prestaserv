@@ -33,7 +33,7 @@ class PermissionsController extends Controller
 		    }
 		}
 
-        $perms = Permissions::where('user_id', $id)->pluck('controller', 'id');
+        $perms = Permissions::where('user_id', $id)->pluck('role', 'id');
         
         $user = User::find($id);
 
@@ -56,7 +56,7 @@ class PermissionsController extends Controller
 
         	$permission = new Permissions();
 
-            $permission->controller = $value;
+            $permission->role = $value;
         	$permission->user_id = $request->get('id');
         	$permission->r_auth = Auth::user()->id;
 
