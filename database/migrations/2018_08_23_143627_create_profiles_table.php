@@ -20,7 +20,7 @@ class CreateProfilesTable extends Migration
             $table->boolean('administrator')->default(0);
             $table->boolean('default')->default(0);
 
-            $table->integer('r_auth');
+            $table->integer('r_auth')->nullable();
             $table->timestamps();
         });
     }

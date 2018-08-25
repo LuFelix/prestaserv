@@ -23,7 +23,7 @@ class CreateIndicatorsTable extends Migration
             $table->integer('size')->default(2);
             $table->string('glyphicon')->default('glyphicon glyphicon-signal');
 
-            $table->integer('r_auth');
+            $table->integer('r_auth')->nullable();
             $table->timestamps();
         });
     }

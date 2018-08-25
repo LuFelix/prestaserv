@@ -20,7 +20,7 @@ class CreatePermissionsTable extends Migration
             $table->integer('matriz_id')->nullable();
             $table->string('role');
 
-            $table->integer('r_auth');
+            $table->integer('r_auth')->nullable();
             $table->timestamps();
         });
     }

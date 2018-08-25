@@ -21,7 +21,7 @@ class CreateReportsTable extends Migration
             $table->text('image')->nullable();
             $table->text('description')->nullable();
 
-            $table->integer('r_auth');
+            $table->integer('r_auth')->nullable();
             $table->timestamps();
         });
     }

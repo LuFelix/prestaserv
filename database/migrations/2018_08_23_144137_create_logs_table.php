@@ -17,7 +17,7 @@ class CreateLogsTable extends Migration
             $table->increments('id');
             $table->text('description');
 
-            $table->integer('r_auth');
+            $table->integer('r_auth')->nullable();
             $table->timestamps();
         });
     }
