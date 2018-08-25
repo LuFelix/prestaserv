@@ -15,7 +15,9 @@
 <body>
 		
 	<div style="text-align: center;">
-		<img src="{{ URL('/') }}/img/{{$report->image}}" width="50">
+		@if($report->image)
+			<img src="{{ URL('/') }}/images/{{$report->image}}" width="50">
+		@endif
 		<h3>{{$report->name}}</h3>
 	</div>
 

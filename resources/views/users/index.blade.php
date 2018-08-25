@@ -58,12 +58,10 @@
                             <span class="glyphicon glyphicon-edit"></span>
                         </a>
 
-                        <form action="{{ URL('/') }}/users/{{$value->id}}" method="DELETE">
+                        <form method="POST" action="{{ route('users.destroy', $value->id) }}" accept-charset="UTF-8">
                             {!! csrf_field() !!}
-                            {!! Form::hidden('id', $value->id) !!}
-                            <button type="submit" class="btn btn-default">
-                               <span class="glyphicon glyphicon-trash"></span>
-                            </button>
+                            {!! method_field('DELETE') !!}
+                            <button type="submit" onclick="return confirm('Tem certeza que quer deletar?')" class="btn btn-danger glyphicon glyphicon-trash">
                         </form>
 
                     </td>
