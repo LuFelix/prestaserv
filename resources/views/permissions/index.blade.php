@@ -10,7 +10,7 @@
 
     <div class="box-body">
         
-        {!! Form::open(['url' => 'permissions/save', 'method' => 'post']) !!}
+        {!! Form::open(['url' => 'permissions', 'method' => 'post']) !!}
 
         {!! Form::hidden('id', $user->id) !!}
 

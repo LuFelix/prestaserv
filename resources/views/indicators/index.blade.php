@@ -42,11 +42,11 @@
                     
                     <td>
 
-                        <a href="{{ URL('/') }}/indicators/edit/{{$value->id}}" alt="Editar" title="Editar" class="btn btn-default">
+                        <a href="{{ URL('/') }}/indicators/{{$value->id}}/edit" alt="Editar" title="Editar" class="btn btn-default">
                             <span class="glyphicon glyphicon-edit"></span>
                         </a>
 
-                        <form action="{{ URL('/') }}/indicators/delete" method="POST">
+                        <form action="{{ URL('/') }}/indicators/{{$value->id}}" method="DELETE">
                             {!! csrf_field() !!}
                             {!! Form::hidden('id', $value->id) !!}
                             <button type="submit" class="btn btn-default">
@@ -67,7 +67,7 @@
         <br><br>
 
         <div class="form-group text-right">
-            <a href="{{ URL('/') }}/indicators/add" class="btn btn-primary bgpersonalizado">Cadastrar</a>
+            <a href="{{ URL('/') }}/indicators/create" class="btn btn-primary bgpersonalizado">Cadastrar</a>
         </div>
 
     </div>

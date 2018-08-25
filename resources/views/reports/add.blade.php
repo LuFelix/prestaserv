@@ -8,7 +8,7 @@
         <h3 class="box-title">Cadastrar relatório</h3>
     </div>
 
-    {!! Form::open(['url' => 'reports/save', 'method' => 'post', 'enctype' => 'multipart/form-data', 'accept-charset' => 'utf-8']) !!}
+    {!! Form::open(['url' => 'reports', 'method' => 'post', 'enctype' => 'multipart/form-data', 'accept-charset' => 'utf-8']) !!}
 
         <div class="box-body">
 

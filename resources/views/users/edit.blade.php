@@ -8,7 +8,7 @@
         <h3 class="box-title">Editar usuário</h3>
     </div>
 
-    {!! Form::open(['url' => 'users/update', 'method' => 'post', 'enctype' => 'multipart/form-data', 'accept-charset' => 'utf-8']) !!}
+    {!! Form::open(['url' => 'users/$user->id', 'method' => 'put', 'enctype' => 'multipart/form-data', 'accept-charset' => 'utf-8']) !!}
 
         <div class="box-body">
         

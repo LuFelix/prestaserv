@@ -54,11 +54,11 @@
 
                     <td>
 
-                        <a href="{{ URL('/') }}/users/edit/{{$value->id}}" alt="Editar" title="Editar" class="btn btn-default">
+                        <a href="{{ URL('/') }}/users/{{$value->id}}/edit" alt="Editar" title="Editar" class="btn btn-default">
                             <span class="glyphicon glyphicon-edit"></span>
                         </a>
 
-                        <form action="{{ URL('/') }}/users/delete" method="POST">
+                        <form action="{{ URL('/') }}/users/{{$value->id}}" method="DELETE">
                             {!! csrf_field() !!}
                             {!! Form::hidden('id', $value->id) !!}
                             <button type="submit" class="btn btn-default">
@@ -79,7 +79,7 @@
         <br><br>
 
         <div class="form-group text-right">
-            <a href="{{ URL('/') }}/users/add" class="btn btn-primary bgpersonalizado">Cadastrar</a>
+            <a href="{{ URL('/') }}/users/create" class="btn btn-primary bgpersonalizado">Cadastrar</a>
         </div>
 
     </div>

@@ -8,7 +8,7 @@
         <h3 class="box-title">Cadastrar perfil</h3>
     </div>
 
-    {!! Form::open(['url' => 'profiles/save', 'method' => 'post', 'enctype' => 'multipart/form-data', 'accept-charset' => 'utf-8']) !!}
+    {!! Form::open(['url' => 'profiles', 'method' => 'post', 'enctype' => 'multipart/form-data', 'accept-charset' => 'utf-8']) !!}
 
         <div class="box-body">
     

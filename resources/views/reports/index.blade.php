@@ -49,11 +49,11 @@
                             <span class="glyphicon glyphicon-list-alt"></span>
                         </a>
 
-                        <a href="{{ URL('/') }}/reports/edit/{{$value->id}}" alt="Editar" title="Editar" class="btn btn-default">
+                        <a href="{{ URL('/') }}/reports/{{$value->id}}/edit" alt="Editar" title="Editar" class="btn btn-default">
                             <span class="glyphicon glyphicon-edit"></span>
                         </a>
 
-                        <form action="{{ URL('/') }}/reports/delete" method="POST">
+                        <form action="{{ URL('/') }}/reports/{{$value->id}}" method="DELETE">
                             {!! csrf_field() !!}
                             {!! Form::hidden('id', $value->id) !!}
                             <button type="submit" class="btn btn-default">
@@ -74,7 +74,7 @@
         <br><br>
 
         <div class="form-group text-right">
-            <a href="{{ URL('/') }}/reports/add" class="btn btn-primary bgpersonalizado">Cadastrar</a>
+            <a href="{{ URL('/') }}/reports/create" class="btn btn-primary bgpersonalizado">Cadastrar</a>
         </div>
 
     </div>

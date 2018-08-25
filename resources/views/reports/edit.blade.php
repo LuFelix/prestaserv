@@ -8,7 +8,7 @@
         <h3 class="box-title">Editar relatório</h3>
     </div>
 
-    {!! Form::open(['url' => 'reports/update', 'method' => 'post', 'enctype' => 'multipart/form-data', 'accept-charset' => 'utf-8']) !!}
+    {!! Form::open(['url' => 'reports/$reports->id', 'method' => 'put', 'enctype' => 'multipart/form-data', 'accept-charset' => 'utf-8']) !!}
 
         <div class="box-body">
 

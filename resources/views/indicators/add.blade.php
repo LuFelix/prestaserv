@@ -8,7 +8,7 @@
         <h3 class="box-title">Cadastrar indicador</h3>
     </div>
 
-    {!! Form::open(['url' => 'indicators/save', 'method' => 'post', 'enctype' => 'multipart/form-data', 'accept-charset' => 'utf-8']) !!}
+    {!! Form::open(['url' => 'indicators', 'method' => 'post', 'enctype' => 'multipart/form-data', 'accept-charset' => 'utf-8']) !!}
 
         <div class="box-body">
 
