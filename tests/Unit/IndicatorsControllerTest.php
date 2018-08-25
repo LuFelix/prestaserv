@@ -47,7 +47,7 @@ class IndicatorsControllerTest extends TestCase
 
 		$this->be($user);
 
-	    $response = $this->get('/indicators/add');
+	    $response = $this->get('/indicators/create');
 
 	   	$response->assertSee('Cadastrar indicador');
 
@@ -64,7 +64,7 @@ class IndicatorsControllerTest extends TestCase
 
 		$this->be($user);
 
-	    $response = $this->post('/indicators/save', [
+	    $response = $this->post('/indicators', [
 	    	'name' => 'TESTE',
 	    	'query' => 'SELECT * FROM users;',
 	    	'color' => 'aqua',
@@ -87,7 +87,7 @@ class IndicatorsControllerTest extends TestCase
 
 		$indicator = Indicators::first();
 
-	   	$response = $this->get('/indicators/edit/' . $indicator->id);
+	   	$response = $this->get('/indicators/' . $indicator->id . '/edit');
 
 	   	$response->assertSee('Editar indicador');
 
@@ -113,7 +113,7 @@ class IndicatorsControllerTest extends TestCase
 
 		$rdn = str_random(10);
 
-	    $response = $this->post('/indicators/update', [
+	    $response = $this->put('/indicators/' . $indicator->id, [
 	    	'id' => $indicator->id,
 	    	'name' => 'TESTE',
 	    	'query' => 'SELECT * FROM users;',
@@ -141,7 +141,7 @@ class IndicatorsControllerTest extends TestCase
 
 		$indicator = Indicators::where('name', 'TESTE')->first();
 
-	   	$response = $this->post('/indicators/delete',
+	   	$response = $this->delete('/indicators/delete',
 	   		[
 	   			'id' => $indicator->id
 	   		]
