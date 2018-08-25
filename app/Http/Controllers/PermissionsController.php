@@ -58,6 +58,7 @@ class PermissionsController extends Controller
 
             $permission->role = $value;
         	$permission->user_id = $request->get('id');
+            
         	$permission->r_auth = Auth::user()->id;
 
         	$permission->save();

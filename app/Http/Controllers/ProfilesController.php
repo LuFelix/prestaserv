@@ -46,6 +46,8 @@ class ProfilesController extends Controller
             $profiles->moderator = $request->get('moderator');
             $profiles->administrator = $request->get('administrator');
 
+            $profiles->r_auth = Auth::user()->id;
+
             $profiles->save();
 
             Session::flash('flash_success', "Perfil cadastrado com sucesso!");
@@ -91,15 +93,15 @@ class ProfilesController extends Controller
         return Redirect::to('/profiles');
     }
 
-    public function destroy(Request $request)
+    public function destroy($id)
     {   
         try {
 
-            $profiles = Profiles::find($request->get('id'))->delete();
+            $profiles = Profiles::find($id)->delete();
 
             Session::flash('flash_success', "Perfil excluído com sucesso!");
 
-            Logs::cadastrar(Auth::user()->id, (Auth::user()->name . ' excluiu o perfil ID: ' . $request->get('id')));
+            Logs::cadastrar(Auth::user()->id, (Auth::user()->name . ' excluiu o perfil ID: ' . $id));
 
         } catch (\Illuminate\Database\QueryException $e) {
 

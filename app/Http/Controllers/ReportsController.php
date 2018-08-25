@@ -49,6 +49,8 @@ class ReportsController extends Controller
             $reports->description = $data['description'];
             $reports->size = $data['size'];
 
+            $reports->r_auth = Auth::user()->id;
+
             if ($request->image) {
             
                 $img = time().'.'.$request->image->getClientOriginalExtension();
@@ -136,15 +138,15 @@ class ReportsController extends Controller
         return Redirect::to('/reports');
     }
 
-    public function destroy(Request $request)
+    public function destroy($id)
     {   
         try {
          
-            $reports = Reports::find($request->get('id'))->delete();
+            $reports = Reports::find($id)->delete();
 
             Session::flash('flash_success', "Relatório excluído com sucesso!");
 
-            Logs::cadastrar(Auth::user()->id, (Auth::user()->name . ' excluiu o relatório ID: ' . $request->get('id')));
+            Logs::cadastrar(Auth::user()->id, (Auth::user()->name . ' excluiu o relatório ID: ' . $id));
 
         } catch (\Illuminate\Database\QueryException $e) {
 

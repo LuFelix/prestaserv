@@ -81,6 +81,8 @@ class UsersController extends Controller
             $user->username = $data['username'];
             $user->password = bcrypt($data['password']);
 
+            $user->r_auth = Auth::user()->id;
+
             if ($request->image) {
             
                 $img = time().'.'.$request->image->getClientOriginalExtension();
@@ -192,15 +194,15 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request)
+    public function destroy($id)
     {   
         try {
 
-            User::find($request->get('id'))->delete();
+            User::find($id)->delete();
 
             Session::flash('flash_success', "Usuário excluído com sucesso");
 
-            Logs::cadastrar(Auth::user()->id, (Auth::user()->name . ' excluiu o usuário ID: ' . $request->get('id')));
+            Logs::cadastrar(Auth::user()->id, (Auth::user()->name . ' excluiu o usuário ID: ' . $id));
 
         } catch (\Illuminate\Database\QueryException $e) {
 

@@ -65,6 +65,11 @@ class IndicatorsController extends Controller
         return Redirect::to('/indicators');
     }
 
+    public function show($id)
+    {
+        
+    }
+
     public function edit($id)
     {
         $indicators = Indicators::find($id);
@@ -74,7 +79,7 @@ class IndicatorsController extends Controller
         ]);
     }
 
-    public function update(Request $request)
+    public function update(Request $request, $id)
     {   
         try {
 
@@ -103,15 +108,15 @@ class IndicatorsController extends Controller
         return Redirect::to('/indicators');
     }
 
-    public function destroy(Request $request)
+    public function destroy($id)
     {   
         try {
 
-            Indicators::find($request->get('id'))->delete();
+            Indicators::find($id)->delete();
 
             Session::flash('flash_success', "Indicador excluído com sucesso!");
 
-            Logs::cadastrar(Auth::user()->id, (Auth::user()->name . ' excluiu o indicador ID: ' . $request->get('id')));
+            Logs::cadastrar(Auth::user()->id, (Auth::user()->name . ' excluiu o indicador ID: ' . $id));
 
         } catch (\Illuminate\Database\QueryException $e) {
 
