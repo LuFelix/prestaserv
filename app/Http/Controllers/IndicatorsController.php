@@ -116,11 +116,19 @@ class IndicatorsController extends Controller
     {   
         try {
 
-            Indicators::find($id)->delete();
+            $indicators = Indicators::find($id);
 
-            Session::flash('flash_success', "Indicador excluído com sucesso!");
+            if ($indicators) {
 
-            Logs::cadastrar(Auth::user()->id, (Auth::user()->name . ' excluiu o indicador ID: ' . $id));
+                $indicadors->delete();
+                
+                Session::flash('flash_success', "Indicador excluído com sucesso!");
+
+                Logs::cadastrar(Auth::user()->id, (Auth::user()->name . ' excluiu o indicador ID: ' . $id));
+            }
+            else {
+                Session::flash('flash_error', "Indicador não encontrado!");
+            }
 
         } catch (\Illuminate\Database\QueryException $e) {
 
