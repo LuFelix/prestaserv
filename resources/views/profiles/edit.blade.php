@@ -27,15 +27,23 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    {!! Form::Label('admin', 'O usuário com este perfil tem acesso de administrador neste sistema?') !!}
-                    {!! Form::select('administrator', [ 0 => 'Não', 1 => 'Sim' ], $profiles->administrator, ['class' => 'form-control col-md-2']) !!}
+                    <div class="form-group">
+                        <div class="input text">
+                            {!! Form::Label('admin', 'O usuário com este perfil tem acesso de administrador neste sistema?') !!}
+                            {!! Form::select('administrator', [ 0 => 'Não', 1 => 'Sim' ], $profiles->administrator, ['class' => 'form-control']) !!}
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-md-12">
-                    {!! Form::Label('master', 'O usuário com este perfil pode ver registros de outros usuários?') !!}
-                    {!! Form::select('moderator', [ 0 => 'Não', 1 => 'Sim' ], $profiles->moderator, ['class' => 'form-control col-md-2']) !!}
+                    <div class="form-group">
+                        <div class="input text">
+                            {!! Form::Label('master', 'O usuário com este perfil pode ver registros de outros usuários?') !!}
+                            {!! Form::select('moderator', [ 0 => 'Não', 1 => 'Sim' ], $profiles->moderator, ['class' => 'form-control']) !!}
+                        </div>
+                    </div>
                 </div>
             </div>
 

@@ -67,7 +67,11 @@ class IndicatorsController extends Controller
 
     public function show($id)
     {
-        
+        $indicators = Indicators::find($id);
+
+        return view('indicators.show', [
+            'indicators' => $indicators, 
+        ]);
     }
 
     public function edit($id)

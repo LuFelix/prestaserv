@@ -53,6 +53,10 @@
                             <span class="glyphicon glyphicon-edit"></span>
                         </a>
 
+                        <a href="{{ URL('/') }}/reports/{{$value->id}}" alt="Visualizar" title="Visualizar" class="btn btn-default">
+                            <span class="glyphicon glyphicon-share-alt"></span>
+                        </a>
+
                         <form method="POST" action="{{ route('reports.destroy', $value->id) }}" accept-charset="UTF-8">
                             {!! csrf_field() !!}
                             {!! method_field('DELETE') !!}

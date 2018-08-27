@@ -74,6 +74,15 @@ class ReportsController extends Controller
         return Redirect::to('/reports');
     }
 
+    public function show($id)
+    {
+        $reports = Reports::find($id);
+
+        return view('reports.show', [
+            'reports' => $reports, 
+        ]);
+    }
+
     public function edit($id)
     {
         $reports = Reports::find($id);

@@ -61,6 +61,15 @@ class ProfilesController extends Controller
         return Redirect::to('/profiles');
     }
 
+    public function show($id)
+    {
+        $profiles = Profiles::find($id);
+
+        return view('profiles.show', [
+            'profiles' => $profiles, 
+        ]);
+    }
+
     public function edit($id)
     {
         $profiles = Profiles::find($id);

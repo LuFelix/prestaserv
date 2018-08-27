@@ -114,7 +114,20 @@ class UsersController extends Controller
      */
     public function show($id)
     {
-        //
+        $logged = Auth::user();
+
+        $user = User::find($id);
+
+        if (Permissions::permissaoModerador($logged)) {
+            $profiles = Profiles::pluck('name', 'id');
+        } else {
+            $profiles = Profiles::where('r_auth', $logged->id)->orWhere('default', 1)->pluck('name', 'id');
+        }
+
+        return view('users.show', [
+            'user' => $user, 
+            'profiles' => $profiles
+        ]);
     }
 
     /**
