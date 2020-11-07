@@ -48,7 +48,7 @@
                                 <p class="text-center m-t-xs text-sm">Não tem uma conta?</p>
                                 <a href="{{ url('/register') }}" class="btn btn-info btn-block m-t-md">Criar uma conta</a>
                             </form>
-                            <p class="text-center m-t-xs text-sm">2018 &copy; Rizer.com.br</p>
+                            <p class="text-center m-t-xs text-sm">2020 &copy; Rota.com.br</p>
                         </div>
                     </div>
                 </div><!-- Row -->
