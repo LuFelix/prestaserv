@@ -66,7 +66,7 @@
 
                             </form>
 
-                            <p class="text-center m-t-xs text-sm">2018 &copy; Rizer.com.br</p>
+                            <p class="text-center m-t-xs text-sm">2020 &copy; RotaMaceio.com.br</p>
 
                         </div>
                     </div>

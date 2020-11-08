@@ -25,4 +25,12 @@
 	border-color: #3c8dbc !important; 
 }
 
+.bgsystem{
+	background-color: #000000 !important; 
+	border-color: #000000 !important; 
+}
+.white, .white a {
+	color: #fff;
+}
+
 

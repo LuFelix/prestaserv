@@ -24,20 +24,23 @@
 
 </head>
 
-<body class="skin-blue">
+<body class="skin-black">
     <header class="header">
-        <a href="{{ URL('/') }}" class="logo bgpersonalizado">{{ config('app.name', 'Rizer') }}</a>
-        <nav class="navbar navbar-static-top bgpersonalizado" role="navigation">
-            <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+        <a href="{{ URL('/') }}" class="logo bgsystem">{{ config('app.name', 'Rota') }}</a>
+        <nav class="navbar navbar-static-top bgsystem" role="navigation">
+            <a href="#" class="navbar-btn sidebar-toggle white" data-toggle="offcanvas" role="button" >
+                <span><i class="glyphicon glyphicon-align-justify white"></i></span>
                 <span class="sr-only">Toggle navigation</span>
+                <!--<span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>-->
             </a>
+
             <div class="navbar-right">
                 <ul class="nav navbar-nav">
                     <li class="dropdown user user-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="glyphicon glyphicon-user"></i>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user white"></i>
                             <span> <i class="caret"></i>
                             </span>
                         </a>
@@ -65,14 +68,14 @@
 
                     <li id="principal">
                         <a href="{{ URL('/') }}">
-                            <i class="glyphicon glyphicon-list"></i>
+                            <i class="glyphicon glyphicon-signal"></i>
                             <span>Principal</span>
                         </a>
                     </li>
 
                     <li id='users'>
                         <a href="{{ URL('/') }}/users">
-                            <i class="glyphicon glyphicon-list"></i>
+                            <i class="glyphicon glyphicon-user"></i>
                             <span>Usuários</span>
                         </a>
                     </li>
