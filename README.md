@@ -1,6 +1,8 @@
 # Prestaserv
 
-O PrestaServ é um sistema de cadastro e controle para prestadores de serviços construído utilizando a linguagem PHP e Banco de Dados MySql que possui os serviços que cada prestador realiza. Funcionalidades:
+O PrestaServ é um sistema de cadastro e controle para prestadores de serviços construído utilizando a linguagem PHP e Banco de Dados MySql que possui os serviços que cada prestador realiza. 
+
+Funcionalidades:
 Área de cadastro de prestadores, com informações disponíveis: Nome, telefone, email, foto
 Área de cadastro de serviços para o prestador com informações do serviço: nome, descrição e valor.
 
