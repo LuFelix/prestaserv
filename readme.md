@@ -1,7 +1,7 @@
 ## PrestaServ admin
 
 Painel admin para controle de usuários, gerenciamento de perfis de acesso, permissões, relatórios, indicadores e logs.
-Além desses módulos, já está implementado um sistema de autenticação, cadastro de novos usuários e recuração de senha.
+Além desses módulos, já está implementado um sistema de autenticação, cadastro de novos usuários e recuperação de senha.
 
 ![img](public/images/laravel.png)
 
