@@ -54,5 +54,5 @@ $ ./vendor/bin/phpunit
 $ php artisan serve
 ```
 
-- *user: meusistema@rizer.com.br
-- *password: admin
+- *user: luciano@tiweb.app.br
+- *password: admin12345
